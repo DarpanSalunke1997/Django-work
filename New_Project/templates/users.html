@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Django Site</title>
+        <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+    </head>
+    <body>
+        <h1>Users</h1>
+        {% if user_info %}
+        {% for ui in user_info %}  
+            <div>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <td>{{ ui.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td>{{ ui.addres }}</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>{{ ui. }}</td>
+                    </tr>
+                </table>
+            </div>
+            
+        {% endfor %}
+        {% endif %}
+    </body>
+</html>
